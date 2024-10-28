@@ -1154,3 +1154,57 @@ html {
 	}
 }
 
+
+
+@media (max-width: 468px) {
+    /* Estilo general para el contenedor de productos */
+    .container-products-platillos {
+        display: flex; /* Usar flexbox para la disposición */
+        flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+        justify-content: center; /* Centra los productos horizontalmente */
+        padding: 1rem; /* Espaciado interno */
+    }
+
+    /* Tarjeta de producto */
+    .card-product {
+        flex: 0 0 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+        margin-bottom: 1.5rem; /* Espaciado entre las tarjetas */
+        border: 1px solid #ccc; /* Borde ligero para cada tarjeta */
+        border-radius: 8px; /* Bordes redondeados */
+        overflow: hidden; /* Para asegurarse que la imagen no sobresalga */
+        background-color: #fff; /* Fondo blanco para las tarjetas */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para efecto de profundidad */
+        transition: transform 0.3s; /* Transición suave para el efecto hover */
+    }
+
+    /* Efecto hover para las tarjetas */
+    .card-product:hover {
+        transform: scale(1.05); /* Escala ligeramente la tarjeta al pasar el mouse */
+    }
+
+    /* Contenedor de la imagen dentro de la tarjeta */
+    .container-img img {
+        width: 100%; /* Imagen ocupa el 100% del ancho de la tarjeta */
+        height: auto; /* Mantiene la proporción de la imagen */
+    }
+
+    /* Estilo del título y contenido del producto */
+    .content-card-product {
+        padding: 1rem; /* Espaciado interno para el contenido */
+    }
+
+    .content-card-product h3 {
+        font-size: 1.6rem; /* Tamaño de fuente más grande para los títulos */
+        margin-bottom: 0.5rem; /* Espaciado debajo del título */
+    }
+
+    .content-card-product p {
+        font-size: 1.2rem; /* Tamaño de fuente más pequeño para la descripción */
+        margin-bottom: 0.5rem; /* Espaciado debajo del párrafo */
+    }
+
+    .price {
+        font-size: 1.4rem; /* Tamaño de fuente para el precio */
+        font-weight: bold; /* Hacer el precio más destacado */
+    }
+}
