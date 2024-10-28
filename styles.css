@@ -286,6 +286,8 @@ html {
 }
 
 
+
+
 .feature-content {
 	display: flex;
 	flex-direction: column;
@@ -399,7 +401,7 @@ html {
 	margin-bottom: 1rem;
 }
 
-.container-options span {
+.container-options span{
 	color: #777;
 	background-color: #fff;
 	padding: 0.7rem 3rem;
@@ -418,6 +420,12 @@ html {
 	background-color: var(--primary-color);
 	color: #fff;
 }
+
+.container-options a {
+    color: #777; /* Mantiene el color blanco en el enlace */
+    text-decoration: none; /* Opcional: elimina el subrayado */
+}
+
 
 /* Products */
 .container-products {
