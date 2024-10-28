@@ -516,66 +516,78 @@ html {
 }
 
 .content-card-product {
-    display: flex; /* Asegúrate de que sea un contenedor flex */
-    flex-direction: column; /* Organiza los hijos en columna */
-    align-items: center; /* Centra horizontalmente los elementos hijos */
-    text-align: center; /* Asegura que el texto se centre dentro de su contenedor */
+	display: grid;
+	justify-items: center;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(4, min-content);
+	row-gap: 1rem;
+}
+
+.stars {
+	grid-row: 1/2;
+	grid-column: 1/-1;
+}
+
+.stars i {
+	font-size: 1.3rem;
+	color: var(--primary-color);
 }
 
 .content-card-product h3 {
-    grid-row: 2/3;
-    grid-column: 1/-1;
-    font-weight: 400;
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
+	grid-row: 2/3;
+	grid-column: 1/-1;
+
+	font-weight: 400;
+	font-size: 1.6rem;
+	margin-bottom: 1rem;
+	cursor: pointer;
 }
 
 .content-card-product h3:hover {
-    color: var(--primary-color);
+	color: var(--primary-color);
 }
 
 .add-cart {
-    justify-self: start;
-    border: 2px solid var(--primary-color);
-    padding: 1rem;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.4s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	justify-self: start;
+	border: 2px solid var(--primary-color);
+	padding: 1rem;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.4s ease;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .add-cart:hover {
-    background-color: var(--primary-color);
+	background-color: var(--primary-color);
 }
 
 .add-cart i {
-    font-size: 1.5rem;
-    color: var(--primary-color);
+	font-size: 1.5rem;
+	color: var(--primary-color);
 }
 
 .add-cart:hover i {
-    color: #fff;
+	color: #fff;
 }
 
 .content-card-product .price {
-    justify-self: center;
-    align-self: center;
-    font-size: 1.7rem;
-    font-weight: 600;
-    text-align: center; /* Centra el texto */
+	justify-self: center;
+	align-self: center;
+
+	font-size: 1.7rem;
+	font-weight: 600;
 }
 
 .content-card-product .price span {
-    font-size: 1.5rem;
-    font-weight: 400;
-    text-decoration: line-through;
-    color: #777;
-    margin-left: 0.5rem;
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-decoration: line-through;
+	color: #777;
+	margin-left: 0.5rem;
 }
-
 
 /* ********************************** */
 /*               GALLERY              */
