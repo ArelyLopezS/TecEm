@@ -1090,33 +1090,70 @@ html {
 
 
 	.gallery {
-		grid-template-rows: repeat(2, 20rem);
+		grid-template-rows: repeat(2, auto); /* Ajustar automáticamente la altura */
 	}
-
+	
 	.blogs {
 		padding: 2rem;
 	}
-
+	
 	.container-blogs {
-		grid-template-columns: 1fr;
-		height: 75rem;
+		display: grid; /* Asegurarte de que se mantenga el diseño de cuadrícula */
+		grid-template-columns: 1fr; /* Una sola columna */
+		gap: 2rem; /* Espacio entre los blogs */
+		padding: 1rem; /* Agregar un poco de espaciado alrededor */
 	}
-
+	
+	.card-blog {
+		border-radius: 1.5rem; /* Esquinas redondeadas */
+		overflow: hidden; /* Ocultar desbordamientos */
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto elevado */
+		transition: transform 0.3s; /* Transición suave para el efecto hover */
+	}
+	
+	.card-blog:hover {
+		transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+	}
+	
+	.content-blog {
+		padding: 1rem; /* Espaciado interno para que el texto no esté pegado al borde */
+	}
+	
 	.content-blog h3 {
-		font-size: 2.4rem;
+		font-size: 2.4rem; /* Tamaño de texto del título */
+		margin: 1rem 0; /* Espaciado arriba y abajo */
 	}
-
+	
 	.content-blog span {
-		font-size: 1.8rem;
+		font-size: 1.6rem; /* Tamaño de fecha ajustado */
+		color: #777; /* Color gris claro para la fecha */
 	}
-
+	
 	.content-blog p {
-		font-size: 2.2rem;
+		font-size: 2rem; /* Tamaño de texto ajustado */
+		line-height: 1.5; /* Espaciado de línea para mejor legibilidad */
+		margin: 1rem 0; /* Espaciado arriba y abajo */
 	}
-
-	.btn-read-more{
-		font-size: 1.8rem;
+	
+	.btn-read-more {
+		display: inline-block; /* Asegurarse de que sea un bloque en línea */
+		padding: 0.5rem 1rem; /* Espaciado interno del botón */
+		font-size: 1.8rem; /* Tamaño de texto del botón */
+		background-color: var(--primary-color); /* Color de fondo del botón */
+		color: #fff; /* Color del texto del botón */
+		border-radius: 1rem; /* Esquinas redondeadas */
+		text-align: center; /* Centrar texto */
+		text-decoration: none; /* Sin subrayado */
+		margin-top: 1rem; /* Espacio arriba del botón */
+		transition: background-color 0.3s; /* Transición suave para el hover */
 	}
+	
+	.btn-read-more:hover {
+		background-color: darken(var(--primary-color), 10%); /* Color de fondo más oscuro al pasar el mouse */
+	}
+	
+	
+	
 
 	.contact-info ul,
 	.information ul,
