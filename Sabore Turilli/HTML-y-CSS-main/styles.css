@@ -31,6 +31,32 @@ html {
 	font-size: 3rem;
 }
 
+.heading-platillo {
+	background-size: cover;
+	background-position: center;
+	color: #ffffff;
+	padding: 100px 20px;
+	text-align: center;
+	font-weight: 500;
+	font-size: 3rem;
+}
+
+#pizza .heading-platillo {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('image/Pizzas-artesanas.jpg');
+}
+
+#ensaladas .heading-platillo {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('image/ensalada.jpg');
+}
+
+#pastas .heading-platillo {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('image/pasta4.jpg');
+}
+
+#bebidas .heading-platillo {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('image/galeria.jpg');
+}
+
 /* ********************************** */
 /*               HEADER               */
 /* ********************************** */
@@ -78,29 +104,6 @@ html {
 	letter-spacing: -1px;
 }
 
-.container-user {
-	display: flex;
-	gap: 1rem;
-	cursor: pointer;
-}
-
-.container-user .fa-user {
-	font-size: 3rem;
-	color: var(--primary-color);
-	padding-right: 2.5rem;
-	border-right: 1px solid #e2e2e2;
-}
-
-.container-user .fa-basket-shopping {
-	font-size: 3rem;
-	color: var(--primary-color);
-	padding-left: 1rem;
-}
-
-.content-shopping-cart {
-	display: flex;
-	flex-direction: column;
-}
 
 /* ************* NAVBAR ************* */
 .container-navbar {
@@ -413,6 +416,14 @@ html {
 	gap: 3rem;
 }
 
+.container-products-platillos {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 20px;
+	padding: 20px;
+	justify-items: center;
+}
+
 .card-product {
 	background-color: #fff;
 	padding: 2rem 3rem;
@@ -428,6 +439,7 @@ html {
 .container-img img {
 	width: 100%;
 }
+
 
 .container-img .discount {
 	position: absolute;
