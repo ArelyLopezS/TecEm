@@ -897,6 +897,12 @@ html {
 	font-size: 1.6rem;
 }
 
+
+
+
+
+
+
 /* ********************************** */
 /*       MEDIA QUERIES -- 468px       */
 /* ********************************** */
@@ -914,11 +920,6 @@ html {
 		font-size: 2.8rem;
 	}
 
-	.card-feature {
-		flex-direction: column;
-		border-radius: 2rem;
-	}
-
 	.feature-content {
 		align-items: center;
 	}
@@ -933,16 +934,7 @@ html {
 		text-align: center;
 	}
 
-	.container-options span {
-		font-size: 1.8rem;
-		padding: 1rem 1.5rem;
-		font-weight: 500;
-	}
 
-	.container-products {
-		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-		gap: 1rem;
-	}
 
 	.container-img .discount {
 		font-size: 2rem;
@@ -983,8 +975,6 @@ html {
 		font-size: 1.4rem; /* Tamaño de texto más pequeño para el enlace */
 	}
 	
-
-
 
 
 	.blogs {
