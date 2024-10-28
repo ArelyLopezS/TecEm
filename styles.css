@@ -1055,6 +1055,41 @@ html {
 		font-size: 2.2rem;
 	}
 
+
+	.container-categories {
+		display: grid;
+		grid-template-columns: 1fr; /* Una sola columna en pantallas pequeñas */
+		gap: 2rem; /* Menor espacio entre los elementos */
+		justify-items: center; /* Centramos las tarjetas dentro de la cuadrícula */
+	}
+	
+	.card-category {
+		height: 15rem; /* Ajustar altura en móviles */
+		width: 100%; /* Hacer la tarjeta flexible */
+		max-width: 50rem; /* Ancho máximo de la tarjeta */
+		border-radius: 2rem; /* Esquinas redondeadas */
+		overflow: hidden; /* Asegura que el contenido no se desborde */
+		box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Añadir sombra para un efecto elevado */
+		display: flex; /* Para centrar contenido interno */
+		flex-direction: column; /* Alinear el contenido en columna */
+		align-items: center; /* Centrar horizontalmente */
+		justify-content: center; /* Centrar verticalmente */
+		padding: 1rem; /* Padding interno */
+	}
+	
+	.card-category p {
+		font-size: 2rem; /* Tamaño de texto más pequeño */
+		text-align: center; /* Centrar el texto */
+	}
+	
+	.card-category span {
+		font-size: 1.4rem; /* Tamaño de texto más pequeño para el enlace */
+	}
+	
+
+
+
+
 	.gallery {
 		grid-template-rows: repeat(2, 20rem);
 	}
