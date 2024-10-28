@@ -906,10 +906,23 @@ html {
 /* ********************************** */
 /*       MEDIA QUERIES -- 468px       */
 /* ********************************** */
-@media (max-width: 468px) {
+@media (max-width: 700px) {
 	html {
 		font-size: 42.5%;
 	}
+
+	.container-logo {
+        align-items: center; /* Centra verticalmente el contenido */
+		padding-right: 4rem;
+    }
+
+    .container-logo i {
+        font-size: 2.5rem; /* Tamaño de ícono ligeramente mayor para mejor visibilidad */
+    }
+
+    .container-logo h1 a {
+        font-size: 2rem; /* Tamaño de fuente aún más pequeño en pantallas pequeñas */
+    }
 
 	.content-banner {
 		max-width: 50rem;
@@ -1156,7 +1169,7 @@ html {
 
 
 
-@media (max-width: 468px) {
+@media (max-width: 700px) {
     /* Estilo general para el contenedor de productos */
     .container-products-platillos {
         display: flex; /* Usar flexbox para la disposición */
