@@ -1048,7 +1048,7 @@ html {
 		border-radius: 1.5rem; /* Esquinas redondeadas */
 		overflow: hidden; /* Ocultar desbordamientos */
 		box-shadow: 0 4px 15px rgba(0, 0, 0, 0); /* Sombra suave para un efecto elevado */
-		background-color: #777 /* Color de fondo blanco para el card */
+		background-color: #777; /* Color de fondo blanco para el card */
 		transition: transform 0.3s; /* Transición suave para el efecto hover */
 	}
 	
