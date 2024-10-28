@@ -516,11 +516,10 @@ html {
 }
 
 .content-card-product {
-	display: grid;
-	justify-items: center;
-	grid-template-columns: 1fr 1fr;
-	grid-template-rows: repeat(4, min-content);
-	row-gap: 1rem;
+    display: flex; /* Asegúrate de que sea un contenedor flex */
+    flex-direction: column; /* Organiza los hijos en columna */
+    align-items: center; /* Centra horizontalmente los elementos hijos */
+    text-align: center; /* Asegura que el texto se centre dentro de su contenedor */
 }
 
 .stars {
@@ -576,7 +575,7 @@ html {
 .content-card-product .price {
 	justify-self: center;
 	align-self: center;
-
+    text-align: center; /* Centra el texto */
 	font-size: 1.7rem;
 	font-weight: 600;
 }
