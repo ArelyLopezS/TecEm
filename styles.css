@@ -276,6 +276,16 @@ html {
 	color: var(--primary-color);
 }
 
+.card-category a {
+    color: white; /* Mantiene el color blanco en el enlace */
+    text-decoration: none; /* Opcional: elimina el subrayado */
+}
+
+.card-category a:hover {
+    color: #f0f0f0; /* Cambia el color cuando se pasa el mouse (opcional) */
+}
+
+
 .feature-content {
 	display: flex;
 	flex-direction: column;
