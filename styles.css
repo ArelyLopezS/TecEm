@@ -934,7 +934,15 @@ html {
 		text-align: center;
 	}
 
-
+	.card-feature {
+		flex-direction: column;
+		border-radius: 2rem;
+		grid-template-columns: 2fr; /* Una sola columna en pantallas pequeñas */
+	}
+	.container-features {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 3rem 2rem;
+	}
 
 	.container-img .discount {
 		font-size: 2rem;
@@ -999,11 +1007,7 @@ html {
 		transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
 	}
 	
-	.container-img {
-		position: relative; /* Asegúrate de que sea relativo para colocar los botones correctamente */
-		height: 20rem; /* Establecer una altura fija para la imagen */
-		overflow: hidden; /* Ocultar cualquier desbordamiento de la imagen */
-	}
+
 	
 	.container-img img {
 		width: 100%; /* Hacer que la imagen ocupe todo el ancho */
@@ -1113,3 +1117,4 @@ html {
 		font-size: 1.6rem;
 	}
 }
+
