@@ -648,6 +648,7 @@ html {
 	overflow: hidden;
 }
 
+
 .button-group-blog {
 	position: absolute;
 	bottom: 1.5rem;
@@ -897,109 +898,6 @@ html {
 }
 
 /* ********************************** */
-/*       MEDIA QUERIES -- 768px       */
-/* ********************************** */
-@media (max-width: 768px) {
-	html {
-		font-size: 55%;
-	}
-
-	.hero {
-		padding: 2rem;
-	}
-
-	.customer-support {
-		display: none;
-	}
-
-	.content-shopping-cart {
-		display: none;
-	}
-
-	.navbar {
-		padding: 1rem 2rem;
-	}
-
-	.navbar .fa-bars {
-		display: block;
-		color: #fff;
-		font-size: 3rem;
-	}
-
-	.menu {
-		display: none;
-	}
-
-	.content-banner {
-		max-width: 50rem;
-		margin: 0 auto;
-		padding: 25rem 0;
-	}
-
-	.container-features {
-		grid-template-columns: repeat(2, 1fr);
-		padding: 3rem 2rem;
-	}
-
-	.card-feature {
-		padding: 2rem;
-	}
-
-	.heading-1 {
-		font-size: 2.4rem;
-	}
-
-	.card-category {
-		height: 12rem;
-	}
-
-	.card-category p {
-		font-size: 2rem;
-		text-align: center;
-		line-height: 1;
-	}
-
-	.card-category span {
-		font-size: 1.4rem;
-	}
-
-	.container-options {
-		align-items: center;
-	}
-
-	.container-options span {
-		text-align: center;
-		padding: 1rem 2rem;
-	}
-
-	.container-products {
-		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
-	}
-
-	.gallery {
-		grid-template-rows: repeat(2, 15rem);
-	}
-
-	.container-blogs {
-		overflow: hidden;
-		grid-template-columns: 1fr 1fr;
-
-		height: 52rem;
-	}
-
-	.menu-footer {
-		grid-template-columns: repeat(2, 1fr);
-	}
-
-	.copyright {
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		gap: 1.5rem;
-	}
-}
-
-/* ********************************** */
 /*       MEDIA QUERIES -- 468px       */
 /* ********************************** */
 @media (max-width: 468px) {
@@ -1089,31 +987,81 @@ html {
 
 
 
-	.gallery {
-		grid-template-rows: repeat(2, auto); /* Ajustar automáticamente la altura */
-	}
-	
 	.blogs {
-		padding: 2rem;
+		padding: 2rem; /* Espaciado alrededor de la sección */
 	}
 	
 	.container-blogs {
-		display: grid; /* Asegurarte de que se mantenga el diseño de cuadrícula */
-		grid-template-columns: 1fr; /* Una sola columna */
+		display: grid; /* Usar cuadrícula para los blogs */
+		grid-template-columns: 1fr; /* Una sola columna para móviles */
 		gap: 2rem; /* Espacio entre los blogs */
-		padding: 1rem; /* Agregar un poco de espaciado alrededor */
 	}
 	
 	.card-blog {
 		border-radius: 1.5rem; /* Esquinas redondeadas */
 		overflow: hidden; /* Ocultar desbordamientos */
-		box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave para un efecto elevado */
+		box-shadow: 0 4px 15px rgba(0, 0, 0, 0); /* Sombra suave para un efecto elevado */
+		background-color: #777 /* Color de fondo blanco para el card */
 		transition: transform 0.3s; /* Transición suave para el efecto hover */
 	}
 	
 	.card-blog:hover {
 		transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
 	}
+	
+	.container-img {
+		position: relative; /* Asegúrate de que sea relativo para colocar los botones correctamente */
+		height: 20rem; /* Establecer una altura fija para la imagen */
+		overflow: hidden; /* Ocultar cualquier desbordamiento de la imagen */
+	}
+	
+	.container-img img {
+		width: 100%; /* Hacer que la imagen ocupe todo el ancho */
+		height: 100%; /* Asegurarse de que la imagen ocupe toda la altura del contenedor */
+		object-fit: cover; /* Cubrir el contenedor manteniendo la proporción */
+	}
+	
+	.button-group-blog {
+		position: absolute; /* Posicionar los botones sobre la imagen */
+		top: 10px; /* Espaciado desde la parte superior */
+		right: 10px; /* Espaciado desde la derecha */
+		display: flex; /* Usar flexbox para alinear los botones */
+		gap: 1rem; /* Espacio entre los botones */
+		z-index: 1; /* Asegúrate de que los botones estén encima de la imagen */
+		transition: all 0.3s ease; /* Transición uniforme */
+	}
+	
+	.card-blog:hover .button-group-blog {
+		z-index: 2; /* Asegúrate de que los botones aparezcan */
+		right: 1.5rem; /* Desplazamiento a la derecha al pasar el mouse */
+	}
+	
+	.button-group-blog span {
+		background-color: #fff; /* Color de fondo blanco para el botón */
+		width: 40px; /* Ancho fijo para el botón */
+		height: 40px; /* Altura fija para el botón */
+		border-radius: 50%; /* Esquinas redondeadas, convirtiendo el span en un círculo */
+		transition: all 0.4s ease; /* Transición suave para el efecto hover */
+		display: flex; /* Usar flexbox para centrar el contenido */
+		align-items: center; /* Centrar verticalmente */
+		justify-content: center; /* Centrar horizontalmente */
+		box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra suave para un efecto elevado */
+	}
+	
+	.button-group-blog span i {
+		font-size: 1.3rem; /* Tamaño del ícono */
+		color: #333; /* Color del ícono */
+	}
+	
+	.button-group-blog span:hover {
+		background-color: var(--primary-color); /* Color de fondo al pasar el mouse */
+	}
+	
+	.button-group-blog span:hover i {
+		color: #fff; /* Color del ícono al pasar el mouse */
+	}
+	
+	
 	
 	.content-blog {
 		padding: 1rem; /* Espaciado interno para que el texto no esté pegado al borde */
@@ -1130,7 +1078,7 @@ html {
 	}
 	
 	.content-blog p {
-		font-size: 2rem; /* Tamaño de texto ajustado */
+		font-size: 1.8rem; /* Tamaño de texto ajustado */
 		line-height: 1.5; /* Espaciado de línea para mejor legibilidad */
 		margin: 1rem 0; /* Espaciado arriba y abajo */
 	}
@@ -1151,6 +1099,8 @@ html {
 	.btn-read-more:hover {
 		background-color: darken(var(--primary-color), 10%); /* Color de fondo más oscuro al pasar el mouse */
 	}
+	
+	
 	
 	
 	
